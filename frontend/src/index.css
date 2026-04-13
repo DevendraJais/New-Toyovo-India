@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Alfa+Slab+One&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-toy-blue: #90CAF9;
+  --color-toy-blue-light: #E3F2FD;
+  --color-toy-blue-dark: #64B5F6;
+  
+  --color-toy-yellow: #FFF59D;
+  --color-toy-yellow-light: #FFF9C4;
+  --color-toy-yellow-dark: #FFF176;
+  
+  --color-toy-mint: #A5D6A7;
+  --color-toy-mint-light: #E8F5E9;
+  --color-toy-mint-dark: #81C784;
+  
+  --color-toy-coral: #EF9A9A;
+  --color-toy-coral-light: #FFEBEE;
+  --color-toy-coral-dark: #E57373;
+
+  --radius-toy: 20px;
+  --radius-toy-lg: 30px;
+
+  --font-kids: "Comfortaa", "Nunito", "sans-serif";
+  --font-kids-block: "Comfortaa", "serif";
+  --font-modern: "Inter", "Roboto", "sans-serif";
+
+  --shadow-soft: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  --shadow-premium: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-800 font-kids antialiased overflow-x-hidden m-0 p-0;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-[1440px] mx-auto px-4 md:px-8 lg:px-12;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-toy-blue text-white font-semibold rounded-toy transition-all hover:bg-toy-blue-dark active:scale-95 shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-toy-yellow text-slate-800 font-semibold rounded-toy transition-all hover:bg-toy-yellow-dark active:scale-95 shadow-sm hover:shadow-md;
+  }
+
+  .card-toy {
+    @apply bg-white rounded-toy shadow-soft hover:shadow-premium transition-all duration-300;
+  }
+
+  .premium-gradient {
+    background: linear-gradient(135deg, rgba(227, 242, 253, 0.5) 0%, rgba(255, 249, 196, 0.5) 50%, rgba(232, 245, 232, 0.5) 100%);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-toy-blue/20 rounded-full hover:bg-toy-blue/40;
+}
