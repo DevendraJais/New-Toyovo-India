@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import outdoorToys from 'C:/Users/Hp/.gemini/antigravity/brain/b138e92a-5862-452f-9a0f-9db0e3f9aca3/outdoor_toys_cars_1776063174392.png';
-import medicalToys from 'C:/Users/Hp/.gemini/antigravity/brain/b138e92a-5862-452f-9a0f-9db0e3f9aca3/medical_toys_child_1776063229651.png';
+import outdoorToys from '../assets/outdoor_toys.png';
+import medicalToys from '../assets/medical_toys.png';
 
 const DottedCategories = () => {
   const categories = [

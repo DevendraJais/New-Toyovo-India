@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 // Using the generated premium toy image as an absolute overlay
-import toyImage from 'C:/Users/Hp/.gemini/antigravity/brain/b138e92a-5862-452f-9a0f-9db0e3f9aca3/wooden_toy_xylophone_1776061201398.png';
+import toyImage from '../assets/hero_toy.png';
 
 const Hero = () => {
   return (
