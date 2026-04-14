@@ -32,18 +32,18 @@ const Navbar = () => {
       }`}>
         <div className="container-custom flex items-center justify-between">
           
-          {/* Left: Logo & Desktop Navigation Links */}
-          <div className="flex items-center gap-6 lg:gap-12 flex-1 lg:flex-none">
-            {/* Mobile Menu Button */}
-            <div className="flex lg:hidden">
-              <button 
-                className="p-2 hover:bg-black/5 rounded-full transition-colors"
-                onClick={() => setIsMenuOpen(true)}
-              >
-                <Menu className="w-6 h-6 text-slate-700" />
-              </button>
-            </div>
+          {/* Mobile: Left (Menu Button) | Desktop: Hidden */}
+          <div className="flex lg:hidden flex-1 items-center justify-start">
+            <button 
+              className="p-2 hover:bg-black/5 rounded-full transition-colors"
+              onClick={() => setIsMenuOpen(true)}
+            >
+              <Menu className="w-6 h-6 text-slate-700" />
+            </button>
+          </div>
 
+          {/* Mobile: Center (Logo) | Desktop: Left (Logo & Links) */}
+          <div className="flex items-center lg:gap-12 flex-1 lg:flex-none justify-center lg:justify-start">
             <div className="flex items-center cursor-pointer">
               <span 
                 className="text-2xl md:text-3xl font-black tracking-tight whitespace-nowrap" 
@@ -54,7 +54,7 @@ const Navbar = () => {
               </span>
             </div>
 
-            {/* Desktop Links - Now positioned next to logo */}
+            {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <a 
@@ -68,8 +68,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Right: Actions (Search + Icons) */}
-          <div className="flex items-center gap-2 md:gap-4 lg:gap-6">
+          {/* Mobile: Right (Actions) | Desktop: Right (Actions) */}
+          <div className="flex items-center justify-end gap-2 md:gap-4 lg:gap-6 flex-1 lg:flex-none">
             
             {/* Desktop Search Bar */}
             <div className="hidden lg:flex relative items-center">
