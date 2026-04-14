@@ -1,32 +1,33 @@
 import { motion } from 'framer-motion';
-// Using the generated premium toy image as an absolute overlay
-import toyImage from '../assets/hero_toy.png';
+// Original teddy image for mobile
+import mobileToyImage from '../assets/hero_toy.png';
+// New custom seamless panoramic image for desktop
+import desktopToyImage from '../assets/hero_seamless.png';
 
 const Hero = () => {
   return (
-    <section className="relative w-full overflow-hidden h-[400px] md:h-[500px] lg:h-[550px] flex items-center bg-[#09734D]">
+    <section className="relative w-full overflow-hidden h-[400px] md:h-[500px] lg:h-[550px] flex items-center bg-[#09734D] lg:bg-[#6B46C1] transition-colors duration-500">
 
-      {/* Full Section Image - Forced to the right side */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[70%] z-0">
-        <img
-          src={toyImage}
-          className="w-full h-full object-contain lg:object-cover object-right pointer-events-none"
-          alt=""
-        />
+      {/* Hero Image - Seamless full size background */}
+      <div className="absolute inset-0 z-0">
+        <picture>
+          <source srcSet={desktopToyImage} media="(min-width: 1024px)" />
+          <img
+            src={mobileToyImage}
+            className="w-full h-full object-cover object-right pointer-events-none"
+            alt="Hero Banner Toy"
+          />
+        </picture>
       </div>
-
-      {/* Dynamic gradient overlay - Lighter on mobile, strong on desktop */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#09734D] via-[#09734D]/60 lg:via-[#09734D] lg:via-45% to-transparent z-10" />
 
       {/* Decorative Icons Area */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-20">
-      </div>
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-20" />
 
       <div className="w-full px-6 md:px-16 lg:px-32 relative z-30 flex justify-start">
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }} 
-          animate={{ opacity: 1, x: 0 }} 
-          transition={{ duration: 0.8 }} 
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
           className="max-w-[85%] sm:max-w-lg lg:max-w-md text-white space-y-4 md:space-y-6 flex flex-col items-start"
         >
           {/* Sun Icon positioned above text */}
