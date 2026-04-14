@@ -15,19 +15,19 @@ const Hero = () => {
         />
       </div>
 
-      {/* Dynamic gradient overlay to fade image into solid green on the left */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#09734D] via-[#09734D] via-45% to-transparent z-10" />
+      {/* Dynamic gradient overlay - Lighter on mobile, strong on desktop */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#09734D] via-[#09734D]/60 lg:via-[#09734D] lg:via-45% to-transparent z-10" />
 
       {/* Decorative Icons Area */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-20">
       </div>
 
-      <div className="w-full px-4 md:px-16 lg:px-32 relative z-30 flex justify-start">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-[95%] sm:max-w-lg lg:max-w-md text-white space-y-4 md:space-y-6 flex flex-col items-start"
+      <div className="w-full px-6 md:px-16 lg:px-32 relative z-30 flex justify-start">
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }} 
+          animate={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.8 }} 
+          className="max-w-[85%] sm:max-w-lg lg:max-w-md text-white space-y-4 md:space-y-6 flex flex-col items-start"
         >
           {/* Sun Icon positioned above text */}
           <motion.div

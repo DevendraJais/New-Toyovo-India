@@ -30,44 +30,42 @@ const Navbar = () => {
       <nav className={`fixed top-1.5 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-[#FFF9F0]/95 backdrop-blur-md py-2 shadow-sm' : 'bg-[#FFF9F0] py-4'
       }`}>
-        <div className="container-custom flex items-center justify-between gap-4">
+        <div className="container-custom flex items-center justify-between">
           
-          {/* Mobile Menu Button (Left on Mobile) */}
-          <div className="flex lg:hidden">
-            <button 
-              className="p-2 hover:bg-black/5 rounded-full transition-colors"
-              onClick={() => setIsMenuOpen(true)}
-            >
-              <Menu className="w-6 h-6 text-slate-700" />
-            </button>
-          </div>
+          {/* Left: Logo & Desktop Navigation Links */}
+          <div className="flex items-center gap-6 lg:gap-12 flex-1 lg:flex-none">
+            {/* Mobile Menu Button */}
+            <div className="flex lg:hidden">
+              <button 
+                className="p-2 hover:bg-black/5 rounded-full transition-colors"
+                onClick={() => setIsMenuOpen(true)}
+              >
+                <Menu className="w-6 h-6 text-slate-700" />
+              </button>
+            </div>
 
-          {/* Left: Logo (Desktop: Left, Mobile: Center) */}
-          <div className="flex-1 lg:flex-none flex justify-center lg:justify-start">
             <div className="flex items-center cursor-pointer">
               <span 
                 className="text-2xl md:text-3xl font-black tracking-tight whitespace-nowrap" 
-                style={{ 
-                  fontFamily: "'Fredoka One', cursive",
-                }}
+                style={{ fontFamily: "'Fredoka One', cursive" }}
               >
                 <span className="text-[#5D3FD3]">Toy</span>
                 <span className="text-[#FF4D4C]">ovo</span>
               </span>
             </div>
-          </div>
 
-          {/* Center: Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center justify-center gap-8 flex-1">
-            {navLinks.map((link) => (
-              <a 
-                key={link.name} 
-                href={link.path} 
-                className="text-sm font-bold text-slate-800 hover:text-[#FF4D4C] transition-colors whitespace-nowrap"
-              >
-                {link.name}
-              </a>
-            ))}
+            {/* Desktop Links - Now positioned next to logo */}
+            <div className="hidden lg:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a 
+                  key={link.name} 
+                  href={link.path} 
+                  className="text-sm font-bold text-slate-800 hover:text-[#FF4D4C] transition-colors whitespace-nowrap"
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Right: Actions (Search + Icons) */}
@@ -88,8 +86,8 @@ const Navbar = () => {
               <Search className="w-5 h-5" />
             </button>
 
-            {/* User Icon */}
-            <button className="p-2 hover:bg-black/5 rounded-full text-slate-700">
+            {/* User Icon - Hidden on mobile, visible on desktop */}
+            <button className="hidden lg:block p-2 hover:bg-black/5 rounded-full text-slate-700">
               <User className="w-5 h-5 md:w-6 md:h-6" />
             </button>
 
