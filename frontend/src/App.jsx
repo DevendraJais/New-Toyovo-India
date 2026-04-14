@@ -7,6 +7,7 @@ import CoreValues from './components/CoreValues.jsx';
 import ServiceHighlights from './components/ServiceHighlights.jsx';
 import TrendingProducts from './components/TrendingProducts.jsx';
 import Testimonials from './components/Testimonials.jsx';
+import PromotionBanners from './components/PromotionBanners.jsx';
 import BlogSection from './components/BlogSection.jsx';
 import SpecialProducts from './components/SpecialProducts.jsx';
 
@@ -35,6 +36,9 @@ function App() {
 
         {/* 7. Customer Testimonials Section */}
         <Testimonials />
+
+        {/* 8. Promotion Banners Grid */}
+        <PromotionBanners />
 
         {/* 8. Special Products Tabbed Grid */}
         <SpecialProducts />

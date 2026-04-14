@@ -38,6 +38,42 @@ const TrendingProducts = () => {
       discount: "-28%",
       image: "https://media.istockphoto.com/id/2056001990/photo/colorful-plastic-children-toys-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=UMZXR8sqMT18SBUK1iai9oo7ujqJOvsNOno9d0lelCU=",
       tag: "Mini"
+    },
+    {
+      id: 5,
+      name: "Space Explorer Rocket",
+      oldPrice: "₹1,999",
+      price: "₹1,499",
+      discount: "-25%",
+      image: "https://media.istockphoto.com/id/1125381265/photo/colorful-plastic-children-toys-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=UO0AZIkRoPhLaFAc62IbqC7tuOqH3LyS_xFWg9RWwXI=",
+      tag: "Medium"
+    },
+    {
+      id: 6,
+      name: "Magic Building Blocks",
+      oldPrice: "₹799",
+      price: "₹599",
+      discount: "-25%",
+      image: "https://media.istockphoto.com/id/2056001990/photo/colorful-plastic-children-toys-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=UMZXR8sqMT18SBUK1iai9oo7ujqJOvsNOno9d0lelCU=",
+      tag: "Set"
+    },
+    {
+      id: 7,
+      name: "Smart Learning Robot",
+      oldPrice: "₹2,499",
+      price: "₹1,999",
+      discount: "-20%",
+      image: "https://media.istockphoto.com/id/1613712514/photo/colorful-plastic-children-toys-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=klZzQ3Wt6WiaEGuyox9QBq6tmvjxsGW7sjxMtJzciRA=",
+      tag: "Battery Operated"
+    },
+    {
+      id: 8,
+      name: "Jungle Animal Set",
+      oldPrice: "₹599",
+      price: "₹399",
+      discount: "-33%",
+      image: "https://media.istockphoto.com/id/2056001990/photo/colorful-plastic-children-toys-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=UMZXR8sqMT18SBUK1iai9oo7ujqJOvsNOno9d0lelCU=",
+      tag: "Collection"
     }
   ];
 
